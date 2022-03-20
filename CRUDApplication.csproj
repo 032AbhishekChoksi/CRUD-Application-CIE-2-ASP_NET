@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\login.aspx" />
     <Content Include="Employee\index.aspx" />
     <Content Include="Employee\login.aspx" />
     <Content Include="Employee\logout.aspx" />
@@ -74,6 +76,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BEL\EmployeeBEL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
@@ -125,7 +141,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="PDF\" />
   </ItemGroup>
   <PropertyGroup>
