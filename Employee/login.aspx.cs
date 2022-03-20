@@ -45,7 +45,7 @@ namespace CRUDApplication.Employee
 
             DataTable dt = objemployeeBL.DisplayEmployeeByEmailIDAndPassword(objemployeeBEL);
 
-            string dbemail = string.Empty;
+            string dbID = string.Empty;
             string dbname = string.Empty;
             if(dt != null)
             {
@@ -53,7 +53,7 @@ namespace CRUDApplication.Employee
                 { 
                     foreach(DataRow dr in dt.Rows)
                     {
-                        dbemail = dr["email"].ToString();
+                        dbID = dr["id"].ToString();
                         dbname = dr["name"].ToString();
                     }
                     if (isChecked)
@@ -73,7 +73,7 @@ namespace CRUDApplication.Employee
                             Response.Cookies.Add(userInfo);
                         }
                     }
-                    Session["EMAIL"] = dbemail;
+                    Session["EMPID"] = dbID;
                     Session["NAME"] = dbname;
                     Response.Redirect("index.aspx");
                 }

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Admin\index.aspx" />
     <Content Include="Admin\login.aspx" />
+    <Content Include="App_Data\CIE2Practice.sql" />
     <Content Include="Employee\index.aspx" />
     <Content Include="Employee\login.aspx" />
     <Content Include="Employee\logout.aspx" />
@@ -91,8 +92,11 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="BEL\EmployeeBEL.cs" />
+    <Compile Include="BEL\LeaveBEL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\LeaveBL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\LeaveDAL.cs" />
     <Compile Include="Employee\EmployeeMaster.Master.cs">
       <DependentUpon>EmployeeMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

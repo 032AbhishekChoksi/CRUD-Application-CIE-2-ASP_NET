@@ -11,9 +11,9 @@ namespace CRUDApplication.Employee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["EMAIL"] != null && Session["NAME"] != null)
+            if(Session["EMPID"] != null && Session["NAME"] != null)
             {
-                Session.Remove("EMAIL");
+                Session.Remove("EMPID");
                 Session.Remove("NAME");
             }
             Response.Redirect("login.aspx");

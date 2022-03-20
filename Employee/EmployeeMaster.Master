@@ -21,7 +21,7 @@
     <div>
         <header>
             <a href="index.aspx">Home</a>
-            <% if (Session["EMAIL"] != null)
+            <% if (Session["EMPID"] != null)
                { %>
                 <a href="logout.aspx">Logout</a>
             <% } else
