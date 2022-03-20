@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EmployeeMaster.master.cs" Inherits="CRUDApplication.Employee.EmployeeMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        .footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: black;
+           color: white;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <a href="index.aspx">Home</a>
+            <% if (Session["EMAIL"] != null)
+               { %>
+                <a href="logout.aspx">Logout</a>
+            <% } else
+               {  %>
+                <a href="login.aspx">Login</a>
+            <% } %>
+            
+        </header>
+    </div>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="CPH1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="footer">
+        <hr>
+        <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Abhishek Choksi</p>
+        </footer>
+    </div>
+</body>
+</html>
